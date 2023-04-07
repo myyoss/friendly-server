@@ -1,2 +1,0 @@
-# friendly-server
-friendly-server
