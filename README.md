@@ -1,4 +1,4 @@
-# friendly
+# friendly (server)
 friendly- MERN social app
 
 LIVE DEMO:
