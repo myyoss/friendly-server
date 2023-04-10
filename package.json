@@ -21,9 +21,6 @@
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
-  "devServer": {
-    "historyApiFallback": true
-},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
