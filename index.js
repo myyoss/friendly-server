@@ -17,7 +17,6 @@ import { verifyToken } from "./middleware/auth.js";
 import User from "./models/User.js";
 import Post from "./models/Post.js";
 import { users, posts } from "./data/index.js";
-import history from "connect-history-api-fallback"
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -32,19 +31,6 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
-app.use(
-  history({
-    rewrites: [
-      {
-        from: /^\/api\/.*$/,
-        to: function (context) {
-          return context.parsedUrl.pathname;
-        },
-      },
-      { from: /\/.*/, to: "/" },
-    ],
-  })
-);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
